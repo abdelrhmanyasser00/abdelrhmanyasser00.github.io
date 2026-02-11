@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdelrhman Yasser - Accountant & Equity Researcher</title>
+    <title>Abdelrhman Yasser - Accountant & Data Analyst</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -189,6 +189,43 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+        }
+
+        .image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.5s ease;
+        }
+
+        .image-wrapper:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
+        }
+
+        .image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: grayscale(20%);
+            transition: filter 0.5s ease;
+        }
+
+        .image-wrapper:hover img {
+            filter: grayscale(0%);
         }
 
         .about-text h3 {
@@ -551,9 +588,9 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Abdelrhman Yasser</h1>
-            <div class="hero-subtitle">Accountant & Equity Researcher</div>
+            <div class="hero-subtitle">Accountant & Data Analyst</div>
             <p class="hero-description">
-                I am Abdelrhman Yasser, an Accountant and Equity Researcher specializing in financial modeling and data analysis, bridging the gap between finance and business intelligence
+                I am Abdelrhman Yasser, an Accountant and Data Analyst specializing in financial modeling and data analysis, bridging the gap between finance and business intelligence
             </p>
             <div class="scroll-down">
                 <a href="#about">Scroll Down ↓</a>
@@ -569,7 +606,7 @@
                 <div class="about-text">
                     <h3>Transforming Financial Data into Strategic Insights</h3>
                     <p>
-                        As an Accountant and Equity Researcher, I specialize in financial modeling and data analysis to help businesses make informed strategic decisions. My unique combination of accounting expertise and analytical skills allows me to bridge the gap between finance and business intelligence.
+                        As an Accountant and Data Analyst, I specialize in financial modeling and data analysis to help businesses make informed strategic decisions. My unique combination of accounting expertise and analytical skills allows me to bridge the gap between finance and business intelligence.
                     </p>
                     <p>
                         I leverage advanced tools and methodologies to extract meaningful insights from complex financial data, supporting organizations in optimizing their financial performance and making data-driven investment decisions.
@@ -587,7 +624,9 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <!-- Placeholder for image -->
+                    <div class="image-wrapper">
+                        <img src="profile-photo.jpg" alt="Abdelrhman Yasser">
+                    </div>
                 </div>
             </div>
         </div>
@@ -609,9 +648,9 @@
                     <p>Evaluate financial data to support planning, performance assessment, and investment decisions.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📈</div>
-                    <h3>Equity Research</h3>
-                    <p>Comprehensive analysis of equities and market trends to support informed investment strategies.</p>
+                    <div class="service-icon">💼</div>
+                    <h3>Business Analysis</h3>
+                    <p>Analyze business processes and performance to identify opportunities for improvement and growth.</p>
                 </div>
             </div>
         </div>
